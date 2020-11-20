@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ScheduleComponent } from './schedule/schedule.component';
+import { GlobalService } from './service/global.service';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { ScheduleComponent } from './schedule/schedule.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [GlobalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
+import { GlobalService } from "./service/global.service";
 
 @Component({
-  selector: 'hotel',
+  selector: "hotel",
   template: `
-            <registration></registration>
-            <schedule></schedule>
-            `,
+    <registration></registration>
+    <schedule [itemsList]="globalService.items"></schedule>
+  `,
 })
-export class AppComponent { }
+export class AppComponent {
+  public constructor(public globalService: GlobalService){}
+}
+
